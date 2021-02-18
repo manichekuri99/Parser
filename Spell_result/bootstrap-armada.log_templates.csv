@@ -1,0 +1,72 @@
+EventId,EventTemplate,Occurrences
+f70ec6ac,armada.handlers.lock <*> <*> lock[00m,2
+12ac5952,armada.handlers.lock <*> Lock Custom Resource Definition not found creating now[00m,2
+2aca0081,armada.handlers.armada <*> Performing <*> operations.[00m,2
+f1e3f94e,armada.handlers.armada <*> Cloning repo https <*> from branch <*>,9
+3252bb34,armada.handlers.armada <*> Processing ChartGroup <*> <*> sequenced <*>,18
+09280669,armada.handlers.chart_deploy <*> <*> Processing Chart release <*>,32
+e1623616,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-podsecuritypolicy[00m,1
+25d6e523,armada.handlers.wait <*> <*> No Chart timeout specified using default 900s[00m,1
+70c57d57,armada.handlers.chartbuilder <*> <*> Building dependency chart <*> for release <*>,32
+3e56065d,armada.handlers.chart_deploy <*> <*> Installing release <*> in namespace <*> wait <*> timeout <*>,32
+e1e364e7,armada.handlers.tiller <*> <*> Helm install release wait <*> timeout <*>,32
+68d3ee89,armada.handlers.chart_deploy <*> <*> Install completed with results from Tiller {'namespace' <*> 'release' <*> 'description' 'Install complete' 'version' 1 'status' 'DEPLOYED'}[00m,32
+fb8fd46c,armada.handlers.test <*> <*> RUNNING <*> tests with timeout 300s[00m,32
+33125623,armada.handlers.tiller <*> <*> Running Helm test release <*> timeout 300[00m,32
+5953396f,armada.handlers.tiller <*> <*> No Tests Found[00m,15
+4ab8023c,armada.handlers.test <*> <*> PASSED <*>,32
+270e1445,armada.handlers.armada <*> All Charts applied in ChartGroup <*>,18
+218d07be,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-kubernetes-proxy[00m,1
+29249cd8,armada.handlers.wait <*> <*> Waiting for resource type <*> namespace <*> labels release_group <*> required <*> for <*>,61
+40934fdf,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-kubernetes-calico-etcd[00m,1
+c248cb56,armada.handlers.tiller <*> <*> <*> airship-kubernetes-calico-etcd-etcd-test[00m,2
+39eaff28,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-kubernetes-calico[00m,1
+8de7f5a1,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-coredns[00m,1
+d100d6a8,armada.handlers.tiller <*> <*> <*> airship-coredns-test[00m,2
+c7312e8d,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-kubernetes-etcd[00m,1
+4bc1e515,armada.handlers.tiller <*> <*> <*> airship-kubernetes-etcd-etcd-test[00m,2
+d060f826,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-haproxy[00m,1
+4b327db3,armada.handlers.tiller <*> <*> <*> airship-haproxy-haproxy-test[00m,2
+e46b1dab,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-kubernetes-apiserver[00m,1
+abf6dba1,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-kubernetes-controller-manager[00m,1
+d92a0f1a,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-kubernetes-scheduler[00m,1
+59221af6,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ingress-kube-system[00m,1
+02e2af27,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-ceph-ingress[00m,1
+301f7dc7,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-ceph-mon[00m,1
+504c3566,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-ceph-osd[00m,1
+58a8eb4c,armada.handlers.tiller <*> <*> <*> airship-ucp-ceph-osd-test[00m,2
+7f04e780,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-ceph-client[00m,1
+b6a6e520,armada.handlers.tiller <*> <*> <*> airship-ucp-ceph-client-test[00m,2
+cf8ccc47,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-ceph-provisioners[00m,1
+d2e1464f,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-ceph-config[00m,1
+ae86e605,armada.handlers.tiller <*> <*> <*> airship-ucp-ceph-config-test[00m,2
+cf740d9c,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ingress[00m,1
+f1f43d40,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-mariadb[00m,1
+6b9c0101,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-postgresql[00m,1
+92ca69f7,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-rabbitmq[00m,1
+66801c46,armada.handlers.tiller <*> <*> <*> airship-ucp-rabbitmq-test[00m,2
+55730de5,armada.handlers.tiller <*> <*> <*> airship-ucp-mariadb-test[00m,2
+e48de2ea,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-keystone-memcached[00m,1
+7cb183fd,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-keystone[00m,1
+8d905208,armada.handlers.tiller <*> <*> <*> airship-ucp-keystone-test[00m,2
+e9c84d3d,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-divingbell[00m,1
+5fbe6a62,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-tiller[00m,1
+690f3843,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-armada[00m,1
+fee742ce,armada.handlers.tiller <*> <*> <*> airship-ucp-armada-armada-api-test[00m,2
+664a74be,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-barbican[00m,1
+cb93a9f5,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-deckhand[00m,1
+4949732f,armada.handlers.tiller <*> <*> <*> airship-ucp-barbican-test[00m,2
+c0d28c76,armada.handlers.tiller <*> <*> <*> airship-ucp-deckhand-deckhand-api-test[00m,2
+3fb70288,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-maas[00m,1
+d47eaa80,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-drydock[00m,1
+4f6e6a07,armada.handlers.tiller <*> <*> <*> airship-drydock-auth-test[00m,2
+49b8fac7,armada.handlers.tiller <*> <*> <*> airship-drydock-api-test[00m,2
+b45a0b4a,armada.handlers.tiller <*> <*> <*> airship-maas-api-test[00m,2
+fbb7981e,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-promenade[00m,1
+0e999fbe,armada.handlers.tiller <*> <*> <*> airship-ucp-promenade-api-test[00m,2
+6fc6006f,armada.handlers.chart_deploy <*> <*> known <*> release_name airship-ucp-shipyard[00m,1
+62075e7c,armada.handlers.tiller <*> <*> <*> airship-ucp-shipyard-shipyard-api-test[00m,2
+7ee32f15,armada.handlers.armada <*> Done applying manifest.[00m,1
+6bd9090b,armada.cli <*> Did not perform chart <*>,3
+022e398b,armada.cli <*> No release changes detected[00m,1
+3c327d53,armada.cli <*> Chart <*> took action install[00m,32

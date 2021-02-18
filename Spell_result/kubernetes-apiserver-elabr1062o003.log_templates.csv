@@ -1,0 +1,20 @@
+EventId,EventTemplate,Occurrences
+8ec9405a,88063 wrap.go 47] <*> <*> <*> 200 <*> <*>],6099451
+dc6c05f8,88063 trace.go 76] Trace<*> <*> <*> <*> <*>,2569
+6670769d,<*> About to <*>,1243
+906141f0,88063 get.go 245] Starting watch for <*> rv <*> labels fields <*> <*> timeout <*>,16803
+f8de3fe1,88063 log.go 172] http TLS handshake error from <*> remote error tls bad certificate,5133
+9b399619,"88063 trace.go 76] Trace<*> ""GuaranteedUpdate etcd3 *core.Node"" <*> <*>",1
+ad963ee2,<*> Transaction <*>,396
+b1b6cfb1,<*> Object stored in database,531
+5afd6243,88063 wrap.go 47] <*> <*> <*> 404 <*> <*>],683
+ab53bb7a,88063 wrap.go 47] POST <*> <*> <*> <*> <*>],4924
+fb84fc45,<*> Listing from storage done,104
+dede275d,<*> <*>,459
+77fd0b5f,88063 wrap.go 47] POST <*> sh&command -c&command -e&command %2Ftmp%2Futils-checkDNS.sh+up&container <*> <*> true&stdout true <*> hijacked <*> <*>],1635
+e4894231,88063 log.go 172] http TLS handshake error from <*> read tcp <*>-><*> read connection reset by peer,152
+c68a3bc1,88063 upgradeaware.go 341] Error proxying data from client to backend tls use of closed connection,3
+7ba539f9,<*> initial value restored,158
+b930164c,<*> Recorded the audit event,2
+cb76d46f,"88063 status.go 64] apiserver received an error that is not an metav1.Status &errors.errorString{s ""context canceled""}",8
+b957c3e9,88063 wrap.go 47] PATCH /api/v1/nodes/elabr1062c006/status?timeout 5s <*> 500,1

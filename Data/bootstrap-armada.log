@@ -1,0 +1,489 @@
+2019-08-23 22:20:31.632 9 INFO armada.handlers.lock [-] Acquiring lock[00m
+2019-08-23 22:20:33.317 9 INFO armada.handlers.lock [-] Lock Custom Resource Definition not found, creating now[00m
+2019-08-23 22:20:33.345 9 INFO armada.handlers.lock [-] Lock Custom Resource Definition not found, creating now[00m
+2019-08-23 22:20:33.543 9 INFO armada.handlers.armada [-] Performing pre-flight operations.[00m
+2019-08-23 22:20:33.543 9 INFO armada.handlers.armada [-] Cloning repo: https://opendev.org/openstack/openstack-helm-infra from branch: bc20c6c8b6de08659be7e469388fe2f6ac231dd1[00m
+2019-08-23 22:20:37.871 9 INFO armada.handlers.armada [-] Cloning repo: https://opendev.org/airship/promenade from branch: 89f9842b2ec428709a05fd0a8d4cd1796043375d[00m
+2019-08-23 22:20:41.460 9 INFO armada.handlers.armada [-] Cloning repo: https://opendev.org/openstack/openstack-helm from branch: 50c982eab03a0d04487479680c02f74bc6ef3e29[00m
+2019-08-23 22:20:46.264 9 INFO armada.handlers.armada [-] Cloning repo: https://opendev.org/airship/divingbell from branch: d3b1a5c9852cd9454a21510b345a874414298d8e[00m
+2019-08-23 22:20:49.481 9 INFO armada.handlers.armada [-] Cloning repo: https://opendev.org/airship/armada from branch: b787c418e313208a406c3d609c801dcdef84b5d2[00m
+2019-08-23 22:20:52.957 9 INFO armada.handlers.armada [-] Cloning repo: https://opendev.org/airship/deckhand from branch: a4850f8c4fc02dd1971282c6d9e4beb9cd5be320[00m
+2019-08-23 22:20:56.467 9 INFO armada.handlers.armada [-] Cloning repo: https://opendev.org/airship/maas from branch: 922db8aee15f978b9e58a9a2a1c0052febc41aa8[00m
+2019-08-23 22:20:59.647 9 INFO armada.handlers.armada [-] Cloning repo: https://opendev.org/airship/drydock from branch: e2bb7cb0f9dd4f65cf2bcd6db50b6c6fc2c7f1de[00m
+2019-08-23 22:21:03.131 9 INFO armada.handlers.armada [-] Cloning repo: https://opendev.org/airship/shipyard from branch: 1472a22dce698ea77f15b007906b263eef470f52[00m
+2019-08-23 22:21:07.677 9 INFO armada.handlers.armada [-] Processing ChartGroup: podsecuritypolicy (Cluster Pod Security Policy definitions), sequenced=False[00m
+2019-08-23 22:21:07.678 9 INFO armada.handlers.chart_deploy [-] [chart=podsecuritypolicy]: Processing Chart, release=airship-podsecuritypolicy[00m
+2019-08-23 22:21:07.679 9 INFO armada.handlers.chart_deploy [-] [chart=podsecuritypolicy]: known: [], release_name: airship-podsecuritypolicy[00m
+2019-08-23 22:21:07.680 9 INFO armada.handlers.wait [-] [chart=podsecuritypolicy]: No Chart timeout specified, using default: 900s[00m
+2019-08-23 22:21:07.680 9 INFO armada.handlers.chartbuilder [-] [chart=podsecuritypolicy]: Building dependency chart osh-infra-helm-toolkit for release podsecuritypolicy.[00m
+2019-08-23 22:21:07.689 9 INFO armada.handlers.chart_deploy [-] [chart=podsecuritypolicy]: Installing release airship-podsecuritypolicy in namespace ucp, wait=True, timeout=900s[00m
+2019-08-23 22:21:07.691 9 INFO armada.handlers.tiller [-] [chart=podsecuritypolicy]: Helm install release: wait=True, timeout=900[00m
+2019-08-23 22:21:10.389 9 INFO armada.handlers.chart_deploy [-] [chart=podsecuritypolicy]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-podsecuritypolicy', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:21:10.389 9 INFO armada.handlers.test [-] [chart=podsecuritypolicy]: RUNNING: airship-podsecuritypolicy tests with timeout=300s[00m
+2019-08-23 22:21:10.389 9 INFO armada.handlers.tiller [-] [chart=podsecuritypolicy]: Running Helm test: release=airship-podsecuritypolicy, timeout=300[00m
+2019-08-23 22:21:10.393 9 INFO armada.handlers.tiller [-] [chart=podsecuritypolicy]: No Tests Found[00m
+2019-08-23 22:21:10.421 9 INFO armada.handlers.test [-] [chart=podsecuritypolicy]: PASSED: airship-podsecuritypolicy[00m
+2019-08-23 22:21:10.422 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup podsecuritypolicy.[00m
+2019-08-23 22:21:10.422 9 INFO armada.handlers.armada [-] Processing ChartGroup: kubernetes-proxy (Kubernetes proxy), sequenced=True[00m
+2019-08-23 22:21:10.422 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-proxy]: Processing Chart, release=airship-kubernetes-proxy[00m
+2019-08-23 22:21:10.422 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-proxy]: known: [], release_name: airship-kubernetes-proxy[00m
+2019-08-23 22:21:10.422 9 INFO armada.handlers.chartbuilder [-] [chart=kubernetes-proxy]: Building dependency chart kubernetes-proxy-htk for release kubernetes-proxy.[00m
+2019-08-23 22:21:10.431 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-proxy]: Installing release airship-kubernetes-proxy in namespace kube-system, wait=True, timeout=600s[00m
+2019-08-23 22:21:10.433 9 INFO armada.handlers.tiller [-] [chart=kubernetes-proxy]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:21:34.565 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-proxy]: Install completed with results from Tiller: {'namespace': 'kube-system', 'release': 'airship-kubernetes-proxy', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:21:34.565 9 INFO armada.handlers.wait [-] [chart=kubernetes-proxy]: Waiting for resource type=job, namespace=kube-system labels=release_group=airship-kubernetes-proxy required=False for 576s[00m
+2019-08-23 22:21:34.576 9 INFO armada.handlers.wait [-] [chart=kubernetes-proxy]: Waiting for resource type=pod, namespace=kube-system labels=release_group=airship-kubernetes-proxy required=True for 576s[00m
+2019-08-23 22:21:34.590 9 INFO armada.handlers.test [-] [chart=kubernetes-proxy]: RUNNING: airship-kubernetes-proxy tests with timeout=300s[00m
+2019-08-23 22:21:34.594 9 INFO armada.handlers.tiller [-] [chart=kubernetes-proxy]: Running Helm test: release=airship-kubernetes-proxy, timeout=300[00m
+2019-08-23 22:21:34.599 9 INFO armada.handlers.tiller [-] [chart=kubernetes-proxy]: No Tests Found[00m
+2019-08-23 22:21:34.655 9 INFO armada.handlers.test [-] [chart=kubernetes-proxy]: PASSED: airship-kubernetes-proxy[00m
+2019-08-23 22:21:34.656 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup kubernetes-proxy.[00m
+2019-08-23 22:21:34.656 9 INFO armada.handlers.armada [-] Processing ChartGroup: kubernetes-container-networking (Container networking via Calico), sequenced=True[00m
+2019-08-23 22:21:34.656 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-calico-etcd]: Processing Chart, release=airship-kubernetes-calico-etcd[00m
+2019-08-23 22:21:34.656 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-calico-etcd]: known: [], release_name: airship-kubernetes-calico-etcd[00m
+2019-08-23 22:21:34.656 9 INFO armada.handlers.chartbuilder [-] [chart=kubernetes-calico-etcd]: Building dependency chart kubernetes-calico-etcd-htk for release kubernetes-calico-etcd.[00m
+2019-08-23 22:21:34.665 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-calico-etcd]: Installing release airship-kubernetes-calico-etcd in namespace kube-system, wait=True, timeout=600s[00m
+2019-08-23 22:21:34.689 9 INFO armada.handlers.tiller [-] [chart=kubernetes-calico-etcd]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:21:58.980 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-calico-etcd]: Install completed with results from Tiller: {'namespace': 'kube-system', 'release': 'airship-kubernetes-calico-etcd', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:21:58.981 9 INFO armada.handlers.wait [-] [chart=kubernetes-calico-etcd]: Waiting for resource type=job, namespace=kube-system labels=release_group=airship-kubernetes-calico-etcd required=False for 576s[00m
+2019-08-23 22:21:58.983 9 INFO armada.handlers.wait [-] [chart=kubernetes-calico-etcd]: Waiting for resource type=pod, namespace=kube-system labels=release_group=airship-kubernetes-calico-etcd required=True for 576s[00m
+2019-08-23 22:21:58.989 9 INFO armada.handlers.test [-] [chart=kubernetes-calico-etcd]: RUNNING: airship-kubernetes-calico-etcd tests with timeout=300s[00m
+2019-08-23 22:21:58.995 9 INFO armada.handlers.tiller [-] [chart=kubernetes-calico-etcd]: Running Helm test: release=airship-kubernetes-calico-etcd, timeout=300[00m
+2019-08-23 22:21:59.003 9 INFO armada.handlers.tiller [-] [chart=kubernetes-calico-etcd]: RUNNING: airship-kubernetes-calico-etcd-etcd-test[00m
+2019-08-23 22:22:01.719 9 INFO armada.handlers.tiller [-] [chart=kubernetes-calico-etcd]: PASSED: airship-kubernetes-calico-etcd-etcd-test[00m
+2019-08-23 22:22:01.801 9 INFO armada.handlers.test [-] [chart=kubernetes-calico-etcd]: PASSED: airship-kubernetes-calico-etcd[00m
+2019-08-23 22:22:01.801 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-calico]: Processing Chart, release=airship-kubernetes-calico[00m
+2019-08-23 22:22:01.801 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-calico]: known: [], release_name: airship-kubernetes-calico[00m
+2019-08-23 22:22:01.801 9 INFO armada.handlers.chartbuilder [-] [chart=kubernetes-calico]: Building dependency chart calico-htk for release kubernetes-calico.[00m
+2019-08-23 22:22:01.811 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-calico]: Installing release airship-kubernetes-calico in namespace kube-system, wait=True, timeout=600s[00m
+2019-08-23 22:22:01.818 9 INFO armada.handlers.tiller [-] [chart=kubernetes-calico]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:23:28.350 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-calico]: Install completed with results from Tiller: {'namespace': 'kube-system', 'release': 'airship-kubernetes-calico', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:23:28.350 9 INFO armada.handlers.wait [-] [chart=kubernetes-calico]: Waiting for resource type=job, namespace=kube-system labels=release_group=airship-kubernetes-calico required=False for 513s[00m
+2019-08-23 22:23:28.355 9 INFO armada.handlers.wait [-] [chart=kubernetes-calico]: Waiting for resource type=pod, namespace=kube-system labels=release_group=airship-kubernetes-calico required=True for 513s[00m
+2019-08-23 22:23:28.365 9 INFO armada.handlers.test [-] [chart=kubernetes-calico]: RUNNING: airship-kubernetes-calico tests with timeout=300s[00m
+2019-08-23 22:23:28.378 9 INFO armada.handlers.tiller [-] [chart=kubernetes-calico]: Running Helm test: release=airship-kubernetes-calico, timeout=300[00m
+2019-08-23 22:23:28.385 9 INFO armada.handlers.tiller [-] [chart=kubernetes-calico]: No Tests Found[00m
+2019-08-23 22:23:28.470 9 INFO armada.handlers.test [-] [chart=kubernetes-calico]: PASSED: airship-kubernetes-calico[00m
+2019-08-23 22:23:28.470 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup kubernetes-container-networking.[00m
+2019-08-23 22:23:28.470 9 INFO armada.handlers.armada [-] Processing ChartGroup: kubernetes-dns (Cluster DNS), sequenced=False[00m
+2019-08-23 22:23:28.471 9 INFO armada.handlers.chart_deploy [-] [chart=coredns]: Processing Chart, release=airship-coredns[00m
+2019-08-23 22:23:28.471 9 INFO armada.handlers.chart_deploy [-] [chart=coredns]: known: [], release_name: airship-coredns[00m
+2019-08-23 22:23:28.471 9 INFO armada.handlers.chartbuilder [-] [chart=coredns]: Building dependency chart coredns-htk for release coredns.[00m
+2019-08-23 22:23:28.479 9 INFO armada.handlers.chart_deploy [-] [chart=coredns]: Installing release airship-coredns in namespace kube-system, wait=True, timeout=600s[00m
+2019-08-23 22:23:28.481 9 INFO armada.handlers.tiller [-] [chart=coredns]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:23:40.698 9 INFO armada.handlers.chart_deploy [-] [chart=coredns]: Install completed with results from Tiller: {'namespace': 'kube-system', 'release': 'airship-coredns', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:23:40.698 9 INFO armada.handlers.wait [-] [chart=coredns]: Waiting for resource type=job, namespace=kube-system labels=release_group=airship-coredns required=False for 588s[00m
+2019-08-23 22:23:40.701 9 INFO armada.handlers.wait [-] [chart=coredns]: Waiting for resource type=pod, namespace=kube-system labels=release_group=airship-coredns required=True for 588s[00m
+2019-08-23 22:23:43.822 9 INFO armada.handlers.test [-] [chart=coredns]: RUNNING: airship-coredns tests with timeout=300s[00m
+2019-08-23 22:23:43.828 9 INFO armada.handlers.tiller [-] [chart=coredns]: Running Helm test: release=airship-coredns, timeout=300[00m
+2019-08-23 22:23:43.834 9 INFO armada.handlers.tiller [-] [chart=coredns]: RUNNING: airship-coredns-test[00m
+2019-08-23 22:23:45.854 9 INFO armada.handlers.tiller [-] [chart=coredns]: PASSED: airship-coredns-test[00m
+2019-08-23 22:23:45.912 9 INFO armada.handlers.test [-] [chart=coredns]: PASSED: airship-coredns[00m
+2019-08-23 22:23:45.912 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup kubernetes-dns.[00m
+2019-08-23 22:23:45.912 9 INFO armada.handlers.armada [-] Processing ChartGroup: kubernetes-etcd (Kubernetes etcd), sequenced=False[00m
+2019-08-23 22:23:45.913 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-etcd]: Processing Chart, release=airship-kubernetes-etcd[00m
+2019-08-23 22:23:45.913 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-etcd]: known: [], release_name: airship-kubernetes-etcd[00m
+2019-08-23 22:23:45.913 9 INFO armada.handlers.chartbuilder [-] [chart=kubernetes-etcd]: Building dependency chart kubernetes-etcd-htk for release kubernetes-etcd.[00m
+2019-08-23 22:23:45.924 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-etcd]: Installing release airship-kubernetes-etcd in namespace kube-system, wait=True, timeout=600s[00m
+2019-08-23 22:23:45.953 9 INFO armada.handlers.tiller [-] [chart=kubernetes-etcd]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:24:24.307 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-etcd]: Install completed with results from Tiller: {'namespace': 'kube-system', 'release': 'airship-kubernetes-etcd', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:24:24.308 9 INFO armada.handlers.wait [-] [chart=kubernetes-etcd]: Waiting for resource type=job, namespace=kube-system labels=release_group=airship-kubernetes-etcd required=False for 562s[00m
+2019-08-23 22:24:24.310 9 INFO armada.handlers.wait [-] [chart=kubernetes-etcd]: Waiting for resource type=pod, namespace=kube-system labels=release_group=airship-kubernetes-etcd required=True for 562s[00m
+2019-08-23 22:24:26.711 9 INFO armada.handlers.test [-] [chart=kubernetes-etcd]: RUNNING: airship-kubernetes-etcd tests with timeout=300s[00m
+2019-08-23 22:24:26.717 9 INFO armada.handlers.tiller [-] [chart=kubernetes-etcd]: Running Helm test: release=airship-kubernetes-etcd, timeout=300[00m
+2019-08-23 22:24:26.725 9 INFO armada.handlers.tiller [-] [chart=kubernetes-etcd]: RUNNING: airship-kubernetes-etcd-etcd-test[00m
+2019-08-23 22:24:28.450 9 INFO armada.handlers.tiller [-] [chart=kubernetes-etcd]: PASSED: airship-kubernetes-etcd-etcd-test[00m
+2019-08-23 22:24:28.515 9 INFO armada.handlers.test [-] [chart=kubernetes-etcd]: PASSED: airship-kubernetes-etcd[00m
+2019-08-23 22:24:28.516 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup kubernetes-etcd.[00m
+2019-08-23 22:24:28.516 9 INFO armada.handlers.armada [-] Processing ChartGroup: kubernetes-haproxy (HAProxy for Kubernetes), sequenced=False[00m
+2019-08-23 22:24:28.516 9 INFO armada.handlers.chart_deploy [-] [chart=haproxy]: Processing Chart, release=airship-haproxy[00m
+2019-08-23 22:24:28.517 9 INFO armada.handlers.chart_deploy [-] [chart=haproxy]: known: [], release_name: airship-haproxy[00m
+2019-08-23 22:24:28.517 9 INFO armada.handlers.chartbuilder [-] [chart=haproxy]: Building dependency chart haproxy-htk for release haproxy.[00m
+2019-08-23 22:24:28.526 9 INFO armada.handlers.chart_deploy [-] [chart=haproxy]: Installing release airship-haproxy in namespace kube-system, wait=True, timeout=600s[00m
+2019-08-23 22:24:28.529 9 INFO armada.handlers.tiller [-] [chart=haproxy]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:24:32.743 9 INFO armada.handlers.chart_deploy [-] [chart=haproxy]: Install completed with results from Tiller: {'namespace': 'kube-system', 'release': 'airship-haproxy', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:24:32.743 9 INFO armada.handlers.wait [-] [chart=haproxy]: Waiting for resource type=job, namespace=kube-system labels=release_group=airship-haproxy required=False for 596s[00m
+2019-08-23 22:24:32.746 9 INFO armada.handlers.wait [-] [chart=haproxy]: Waiting for resource type=pod, namespace=kube-system labels=release_group=airship-haproxy required=True for 596s[00m
+2019-08-23 22:24:33.869 9 INFO armada.handlers.test [-] [chart=haproxy]: RUNNING: airship-haproxy tests with timeout=300s[00m
+2019-08-23 22:24:33.874 9 INFO armada.handlers.tiller [-] [chart=haproxy]: Running Helm test: release=airship-haproxy, timeout=300[00m
+2019-08-23 22:24:33.882 9 INFO armada.handlers.tiller [-] [chart=haproxy]: RUNNING: airship-haproxy-haproxy-test[00m
+2019-08-23 22:24:53.272 9 INFO armada.handlers.tiller [-] [chart=haproxy]: PASSED: airship-haproxy-haproxy-test[00m
+2019-08-23 22:24:53.324 9 INFO armada.handlers.test [-] [chart=haproxy]: PASSED: airship-haproxy[00m
+2019-08-23 22:24:53.324 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup kubernetes-haproxy.[00m
+2019-08-23 22:24:53.324 9 INFO armada.handlers.armada [-] Processing ChartGroup: kubernetes-core (Kubernetes components), sequenced=False[00m
+2019-08-23 22:24:53.325 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-apiserver]: Processing Chart, release=airship-kubernetes-apiserver[00m
+2019-08-23 22:24:53.325 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-apiserver]: known: [], release_name: airship-kubernetes-apiserver[00m
+2019-08-23 22:24:53.325 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-controller-manager]: Processing Chart, release=airship-kubernetes-controller-manager[00m
+2019-08-23 22:24:53.326 9 INFO armada.handlers.chartbuilder [-] [chart=kubernetes-apiserver]: Building dependency chart kubernetes-apiserver-htk for release kubernetes-apiserver.[00m
+2019-08-23 22:24:53.326 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-controller-manager]: known: [], release_name: airship-kubernetes-controller-manager[00m
+2019-08-23 22:24:53.326 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-scheduler]: Processing Chart, release=airship-kubernetes-scheduler[00m
+2019-08-23 22:24:53.326 9 INFO armada.handlers.chartbuilder [-] [chart=kubernetes-controller-manager]: Building dependency chart kubernetes-controller-manager-htk for release kubernetes-controller-manager.[00m
+2019-08-23 22:24:53.326 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-scheduler]: known: [], release_name: airship-kubernetes-scheduler[00m
+2019-08-23 22:24:53.329 9 INFO armada.handlers.chartbuilder [-] [chart=kubernetes-scheduler]: Building dependency chart kubernetes-scheduler-htk for release kubernetes-scheduler.[00m
+2019-08-23 22:24:53.368 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-scheduler]: Installing release airship-kubernetes-scheduler in namespace kube-system, wait=True, timeout=600s[00m
+2019-08-23 22:24:53.373 9 INFO armada.handlers.tiller [-] [chart=kubernetes-scheduler]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:24:53.374 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-controller-manager]: Installing release airship-kubernetes-controller-manager in namespace kube-system, wait=True, timeout=600s[00m
+2019-08-23 22:24:53.375 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-apiserver]: Installing release airship-kubernetes-apiserver in namespace kube-system, wait=True, timeout=600s[00m
+2019-08-23 22:24:53.382 9 INFO armada.handlers.tiller [-] [chart=kubernetes-controller-manager]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:24:53.397 9 INFO armada.handlers.tiller [-] [chart=kubernetes-apiserver]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:25:11.515 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-scheduler]: Install completed with results from Tiller: {'namespace': 'kube-system', 'release': 'airship-kubernetes-scheduler', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:25:11.516 9 INFO armada.handlers.wait [-] [chart=kubernetes-scheduler]: Waiting for resource type=job, namespace=kube-system labels=release_group=airship-kubernetes-scheduler required=False for 582s[00m
+2019-08-23 22:25:11.519 9 INFO armada.handlers.wait [-] [chart=kubernetes-scheduler]: Waiting for resource type=pod, namespace=kube-system labels=release_group=airship-kubernetes-scheduler required=True for 582s[00m
+2019-08-23 22:25:16.022 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-apiserver]: Install completed with results from Tiller: {'namespace': 'kube-system', 'release': 'airship-kubernetes-apiserver', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:25:16.023 9 INFO armada.handlers.wait [-] [chart=kubernetes-apiserver]: Waiting for resource type=job, namespace=kube-system labels=release_group=airship-kubernetes-apiserver required=False for 577s[00m
+2019-08-23 22:25:21.647 9 INFO armada.handlers.chart_deploy [-] [chart=kubernetes-controller-manager]: Install completed with results from Tiller: {'namespace': 'kube-system', 'release': 'airship-kubernetes-controller-manager', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:25:21.648 9 INFO armada.handlers.wait [-] [chart=kubernetes-controller-manager]: Waiting for resource type=job, namespace=kube-system labels=release_group=airship-kubernetes-controller-manager required=False for 572s[00m
+2019-08-23 22:25:21.657 9 INFO armada.handlers.wait [-] [chart=kubernetes-controller-manager]: Waiting for resource type=pod, namespace=kube-system labels=release_group=airship-kubernetes-controller-manager required=True for 572s[00m
+2019-08-23 22:25:22.430 9 INFO armada.handlers.test [-] [chart=kubernetes-scheduler]: RUNNING: airship-kubernetes-scheduler tests with timeout=300s[00m
+2019-08-23 22:25:22.436 9 INFO armada.handlers.tiller [-] [chart=kubernetes-scheduler]: Running Helm test: release=airship-kubernetes-scheduler, timeout=300[00m
+2019-08-23 22:25:22.445 9 INFO armada.handlers.tiller [-] [chart=kubernetes-scheduler]: No Tests Found[00m
+2019-08-23 22:25:22.488 9 INFO armada.handlers.test [-] [chart=kubernetes-scheduler]: PASSED: airship-kubernetes-scheduler[00m
+2019-08-23 22:25:27.796 9 INFO armada.handlers.test [-] [chart=kubernetes-controller-manager]: RUNNING: airship-kubernetes-controller-manager tests with timeout=300s[00m
+2019-08-23 22:25:27.803 9 INFO armada.handlers.tiller [-] [chart=kubernetes-controller-manager]: Running Helm test: release=airship-kubernetes-controller-manager, timeout=300[00m
+2019-08-23 22:25:27.811 9 INFO armada.handlers.tiller [-] [chart=kubernetes-controller-manager]: No Tests Found[00m
+2019-08-23 22:25:27.859 9 INFO armada.handlers.test [-] [chart=kubernetes-controller-manager]: PASSED: airship-kubernetes-controller-manager[00m
+2019-08-23 22:26:16.948 9 INFO armada.handlers.wait [-] [chart=kubernetes-apiserver]: Waiting for resource type=pod, namespace=kube-system labels=release_group=airship-kubernetes-apiserver required=True for 516s[00m
+2019-08-23 22:26:16.956 9 INFO armada.handlers.test [-] [chart=kubernetes-apiserver]: RUNNING: airship-kubernetes-apiserver tests with timeout=300s[00m
+2019-08-23 22:26:16.963 9 INFO armada.handlers.tiller [-] [chart=kubernetes-apiserver]: Running Helm test: release=airship-kubernetes-apiserver, timeout=300[00m
+2019-08-23 22:26:16.971 9 INFO armada.handlers.tiller [-] [chart=kubernetes-apiserver]: No Tests Found[00m
+2019-08-23 22:26:17.039 9 INFO armada.handlers.test [-] [chart=kubernetes-apiserver]: PASSED: airship-kubernetes-apiserver[00m
+2019-08-23 22:26:17.040 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup kubernetes-core.[00m
+2019-08-23 22:26:17.040 9 INFO armada.handlers.armada [-] Processing ChartGroup: ingress-kube-system (Ingress for the site), sequenced=False[00m
+2019-08-23 22:26:17.041 9 INFO armada.handlers.chart_deploy [-] [chart=ingress-kube-system]: Processing Chart, release=airship-ingress-kube-system[00m
+2019-08-23 22:26:17.041 9 INFO armada.handlers.chart_deploy [-] [chart=ingress-kube-system]: known: [], release_name: airship-ingress-kube-system[00m
+2019-08-23 22:26:17.041 9 INFO armada.handlers.chartbuilder [-] [chart=ingress-kube-system]: Building dependency chart ingress-kube-system-htk for release ingress-kube-system.[00m
+2019-08-23 22:26:17.051 9 INFO armada.handlers.chart_deploy [-] [chart=ingress-kube-system]: Installing release airship-ingress-kube-system in namespace kube-system, wait=True, timeout=300s[00m
+2019-08-23 22:26:17.053 9 INFO armada.handlers.tiller [-] [chart=ingress-kube-system]: Helm install release: wait=True, timeout=300[00m
+2019-08-23 22:26:19.463 9 INFO armada.handlers.chart_deploy [-] [chart=ingress-kube-system]: Install completed with results from Tiller: {'namespace': 'kube-system', 'release': 'airship-ingress-kube-system', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:26:19.463 9 INFO armada.handlers.wait [-] [chart=ingress-kube-system]: Waiting for resource type=job, namespace=kube-system labels=release_group=airship-ingress-kube-system required=False for 298s[00m
+2019-08-23 22:26:19.467 9 INFO armada.handlers.wait [-] [chart=ingress-kube-system]: Waiting for resource type=pod, namespace=kube-system labels=release_group=airship-ingress-kube-system required=True for 298s[00m
+2019-08-23 22:26:55.027 9 INFO armada.handlers.test [-] [chart=ingress-kube-system]: RUNNING: airship-ingress-kube-system tests with timeout=300s[00m
+2019-08-23 22:26:55.035 9 INFO armada.handlers.tiller [-] [chart=ingress-kube-system]: Running Helm test: release=airship-ingress-kube-system, timeout=300[00m
+2019-08-23 22:26:55.046 9 INFO armada.handlers.tiller [-] [chart=ingress-kube-system]: No Tests Found[00m
+2019-08-23 22:26:55.111 9 INFO armada.handlers.test [-] [chart=ingress-kube-system]: PASSED: airship-ingress-kube-system[00m
+2019-08-23 22:26:55.112 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup ingress-kube-system.[00m
+2019-08-23 22:26:55.112 9 INFO armada.handlers.armada [-] Processing ChartGroup: ucp-ceph (Ceph Storage), sequenced=True[00m
+2019-08-23 22:26:55.112 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-ingress]: Processing Chart, release=airship-ucp-ceph-ingress[00m
+2019-08-23 22:26:55.112 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-ingress]: known: [], release_name: airship-ucp-ceph-ingress[00m
+2019-08-23 22:26:55.112 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-ceph-ingress]: Building dependency chart ucp-ingress-htk for release ucp-ceph-ingress.[00m
+2019-08-23 22:26:55.122 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-ingress]: Installing release airship-ucp-ceph-ingress in namespace ceph, wait=True, timeout=300s[00m
+2019-08-23 22:26:55.124 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-ingress]: Helm install release: wait=True, timeout=300[00m
+2019-08-23 22:27:07.681 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-ingress]: Install completed with results from Tiller: {'namespace': 'ceph', 'release': 'airship-ucp-ceph-ingress', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:27:07.681 9 INFO armada.handlers.wait [-] [chart=ucp-ceph-ingress]: Waiting for resource type=job, namespace=ceph labels=release_group=airship-ucp-ceph-ingress required=False for 287s[00m
+2019-08-23 22:27:07.684 9 INFO armada.handlers.wait [-] [chart=ucp-ceph-ingress]: Waiting for resource type=pod, namespace=ceph labels=release_group=airship-ucp-ceph-ingress required=True for 287s[00m
+2019-08-23 22:27:08.961 9 INFO armada.handlers.test [-] [chart=ucp-ceph-ingress]: RUNNING: airship-ucp-ceph-ingress tests with timeout=300s[00m
+2019-08-23 22:27:08.970 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-ingress]: Running Helm test: release=airship-ucp-ceph-ingress, timeout=300[00m
+2019-08-23 22:27:08.979 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-ingress]: No Tests Found[00m
+2019-08-23 22:27:09.052 9 INFO armada.handlers.test [-] [chart=ucp-ceph-ingress]: PASSED: airship-ucp-ceph-ingress[00m
+2019-08-23 22:27:09.052 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-mon]: Processing Chart, release=airship-ucp-ceph-mon[00m
+2019-08-23 22:27:09.052 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-mon]: known: [], release_name: airship-ucp-ceph-mon[00m
+2019-08-23 22:27:09.052 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-ceph-mon]: Building dependency chart ceph-htk for release ucp-ceph-mon.[00m
+2019-08-23 22:27:09.063 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-mon]: Installing release airship-ucp-ceph-mon in namespace ceph, wait=True, timeout=1800s[00m
+2019-08-23 22:27:09.065 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-mon]: Helm install release: wait=True, timeout=1800[00m
+2019-08-23 22:29:54.000 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-mon]: Install completed with results from Tiller: {'namespace': 'ceph', 'release': 'airship-ucp-ceph-mon', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:29:54.000 9 INFO armada.handlers.wait [-] [chart=ucp-ceph-mon]: Waiting for resource type=job, namespace=ceph labels=release_group=airship-ucp-ceph-mon required=False for 1635s[00m
+2019-08-23 22:29:58.220 9 INFO armada.handlers.wait [-] [chart=ucp-ceph-mon]: Waiting for resource type=pod, namespace=ceph labels=release_group=airship-ucp-ceph-mon required=True for 1631s[00m
+2019-08-23 22:29:58.238 9 INFO armada.handlers.test [-] [chart=ucp-ceph-mon]: RUNNING: airship-ucp-ceph-mon tests with timeout=300s[00m
+2019-08-23 22:29:58.255 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-mon]: Running Helm test: release=airship-ucp-ceph-mon, timeout=300[00m
+2019-08-23 22:29:58.265 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-mon]: No Tests Found[00m
+2019-08-23 22:29:58.390 9 INFO armada.handlers.test [-] [chart=ucp-ceph-mon]: PASSED: airship-ucp-ceph-mon[00m
+2019-08-23 22:29:58.391 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-osd]: Processing Chart, release=airship-ucp-ceph-osd[00m
+2019-08-23 22:29:58.391 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-osd]: known: [], release_name: airship-ucp-ceph-osd[00m
+2019-08-23 22:29:58.391 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-ceph-osd]: Building dependency chart ceph-htk for release ucp-ceph-osd.[00m
+2019-08-23 22:29:58.400 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-osd]: Installing release airship-ucp-ceph-osd in namespace ceph, wait=True, timeout=900s[00m
+2019-08-23 22:29:58.403 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-osd]: Helm install release: wait=True, timeout=900[00m
+2019-08-23 22:32:18.848 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-osd]: Install completed with results from Tiller: {'namespace': 'ceph', 'release': 'airship-ucp-ceph-osd', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:32:18.848 9 INFO armada.handlers.wait [-] [chart=ucp-ceph-osd]: Waiting for resource type=job, namespace=ceph labels=release_group=airship-ucp-ceph-osd required=False for 760s[00m
+2019-08-23 22:32:18.851 9 INFO armada.handlers.wait [-] [chart=ucp-ceph-osd]: Waiting for resource type=pod, namespace=ceph labels=release_group=airship-ucp-ceph-osd required=True for 760s[00m
+2019-08-23 22:32:18.869 9 INFO armada.handlers.test [-] [chart=ucp-ceph-osd]: RUNNING: airship-ucp-ceph-osd tests with timeout=300s[00m
+2019-08-23 22:32:18.887 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-osd]: Running Helm test: release=airship-ucp-ceph-osd, timeout=300[00m
+2019-08-23 22:32:18.897 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-osd]: RUNNING: airship-ucp-ceph-osd-test[00m
+2019-08-23 22:32:24.574 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-osd]: PASSED: airship-ucp-ceph-osd-test[00m
+2019-08-23 22:32:24.675 9 INFO armada.handlers.test [-] [chart=ucp-ceph-osd]: PASSED: airship-ucp-ceph-osd[00m
+2019-08-23 22:32:24.675 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-client]: Processing Chart, release=airship-ucp-ceph-client[00m
+2019-08-23 22:32:24.675 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-client]: known: [], release_name: airship-ucp-ceph-client[00m
+2019-08-23 22:32:24.675 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-ceph-client]: Building dependency chart ceph-htk for release ucp-ceph-client.[00m
+2019-08-23 22:32:24.686 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-client]: Installing release airship-ucp-ceph-client in namespace ceph, wait=True, timeout=900s[00m
+2019-08-23 22:32:24.689 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-client]: Helm install release: wait=True, timeout=900[00m
+2019-08-23 22:37:11.608 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-client]: Install completed with results from Tiller: {'namespace': 'ceph', 'release': 'airship-ucp-ceph-client', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:37:11.608 9 INFO armada.handlers.wait [-] [chart=ucp-ceph-client]: Waiting for resource type=job, namespace=ceph labels=release_group=airship-ucp-ceph-client required=False for 613s[00m
+2019-08-23 22:37:11.613 9 INFO armada.handlers.wait [-] [chart=ucp-ceph-client]: Waiting for resource type=pod, namespace=ceph labels=release_group=airship-ucp-ceph-client required=True for 613s[00m
+2019-08-23 22:37:11.626 9 INFO armada.handlers.test [-] [chart=ucp-ceph-client]: RUNNING: airship-ucp-ceph-client tests with timeout=300s[00m
+2019-08-23 22:37:11.638 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-client]: Running Helm test: release=airship-ucp-ceph-client, timeout=300[00m
+2019-08-23 22:37:11.651 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-client]: RUNNING: airship-ucp-ceph-client-test[00m
+2019-08-23 22:37:19.404 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-client]: PASSED: airship-ucp-ceph-client-test[00m
+2019-08-23 22:37:19.532 9 INFO armada.handlers.test [-] [chart=ucp-ceph-client]: PASSED: airship-ucp-ceph-client[00m
+2019-08-23 22:37:19.532 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-provisioners]: Processing Chart, release=airship-ucp-ceph-provisioners[00m
+2019-08-23 22:37:19.532 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-provisioners]: known: [], release_name: airship-ucp-ceph-provisioners[00m
+2019-08-23 22:37:19.532 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-ceph-provisioners]: Building dependency chart ceph-htk for release ucp-ceph-provisioners.[00m
+2019-08-23 22:37:19.542 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-provisioners]: Installing release airship-ucp-ceph-provisioners in namespace ceph, wait=True, timeout=900s[00m
+2019-08-23 22:37:19.545 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-provisioners]: Helm install release: wait=True, timeout=900[00m
+2019-08-23 22:37:44.143 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-provisioners]: Install completed with results from Tiller: {'namespace': 'ceph', 'release': 'airship-ucp-ceph-provisioners', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:37:44.144 9 INFO armada.handlers.wait [-] [chart=ucp-ceph-provisioners]: Waiting for resource type=job, namespace=ceph labels=release_group=airship-ucp-ceph-provisioners required=False for 875s[00m
+2019-08-23 22:37:44.148 9 INFO armada.handlers.wait [-] [chart=ucp-ceph-provisioners]: Waiting for resource type=pod, namespace=ceph labels=release_group=airship-ucp-ceph-provisioners required=True for 875s[00m
+2019-08-23 22:37:44.160 9 INFO armada.handlers.test [-] [chart=ucp-ceph-provisioners]: RUNNING: airship-ucp-ceph-provisioners tests with timeout=300s[00m
+2019-08-23 22:37:44.172 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-provisioners]: Running Helm test: release=airship-ucp-ceph-provisioners, timeout=300[00m
+2019-08-23 22:37:44.181 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-provisioners]: No Tests Found[00m
+2019-08-23 22:37:44.262 9 INFO armada.handlers.test [-] [chart=ucp-ceph-provisioners]: PASSED: airship-ucp-ceph-provisioners[00m
+2019-08-23 22:37:44.262 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup ucp-ceph.[00m
+2019-08-23 22:37:44.262 9 INFO armada.handlers.armada [-] Processing ChartGroup: ucp-ceph-config (Ceph config for Airship namespace(s)), sequenced=False[00m
+2019-08-23 22:37:44.263 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-config]: Processing Chart, release=airship-ucp-ceph-config[00m
+2019-08-23 22:37:44.263 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-config]: known: [], release_name: airship-ucp-ceph-config[00m
+2019-08-23 22:37:44.263 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-ceph-config]: Building dependency chart ceph-htk for release ucp-ceph-config.[00m
+2019-08-23 22:37:44.273 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-config]: Installing release airship-ucp-ceph-config in namespace ucp, wait=True, timeout=900s[00m
+2019-08-23 22:37:44.275 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-config]: Helm install release: wait=True, timeout=900[00m
+2019-08-23 22:37:46.585 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ceph-config]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-ucp-ceph-config', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:37:46.586 9 INFO armada.handlers.wait [-] [chart=ucp-ceph-config]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-ucp-ceph-config required=False for 898s[00m
+2019-08-23 22:37:49.226 9 INFO armada.handlers.wait [-] [chart=ucp-ceph-config]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-ucp-ceph-config required=True for 895s[00m
+2019-08-23 22:37:49.232 9 INFO armada.handlers.test [-] [chart=ucp-ceph-config]: RUNNING: airship-ucp-ceph-config tests with timeout=300s[00m
+2019-08-23 22:37:49.237 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-config]: Running Helm test: release=airship-ucp-ceph-config, timeout=300[00m
+2019-08-23 22:37:49.248 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-config]: RUNNING: airship-ucp-ceph-config-test[00m
+2019-08-23 22:38:33.810 9 INFO armada.handlers.tiller [-] [chart=ucp-ceph-config]: PASSED: airship-ucp-ceph-config-test[00m
+2019-08-23 22:38:33.876 9 INFO armada.handlers.test [-] [chart=ucp-ceph-config]: PASSED: airship-ucp-ceph-config[00m
+2019-08-23 22:38:33.876 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup ucp-ceph-config.[00m
+2019-08-23 22:38:33.877 9 INFO armada.handlers.armada [-] Processing ChartGroup: ucp-core (Common Airship Components), sequenced=False[00m
+2019-08-23 22:38:33.877 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ingress]: Processing Chart, release=airship-ingress[00m
+2019-08-23 22:38:33.877 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ingress]: known: [], release_name: airship-ingress[00m
+2019-08-23 22:38:33.878 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-mariadb]: Processing Chart, release=airship-ucp-mariadb[00m
+2019-08-23 22:38:33.878 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-postgresql]: Processing Chart, release=airship-ucp-postgresql[00m
+2019-08-23 22:38:33.878 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-mariadb]: known: [], release_name: airship-ucp-mariadb[00m
+2019-08-23 22:38:33.878 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-ingress]: Building dependency chart ucp-ingress-htk for release ingress.[00m
+2019-08-23 22:38:33.879 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-rabbitmq]: Processing Chart, release=airship-ucp-rabbitmq[00m
+2019-08-23 22:38:33.879 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-postgresql]: known: [], release_name: airship-ucp-postgresql[00m
+2019-08-23 22:38:33.880 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-rabbitmq]: known: [], release_name: airship-ucp-rabbitmq[00m
+2019-08-23 22:38:33.883 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-mariadb]: Building dependency chart mariadb-htk for release ucp-mariadb.[00m
+2019-08-23 22:38:33.883 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-postgresql]: Building dependency chart postgres-htk for release ucp-postgresql.[00m
+2019-08-23 22:38:33.889 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-rabbitmq]: Building dependency chart ucp-rabbitmq-htk for release ucp-rabbitmq.[00m
+2019-08-23 22:38:33.954 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ingress]: Installing release airship-ingress in namespace ucp, wait=True, timeout=300s[00m
+2019-08-23 22:38:33.956 9 INFO armada.handlers.tiller [-] [chart=ucp-ingress]: Helm install release: wait=True, timeout=300[00m
+2019-08-23 22:38:33.958 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-postgresql]: Installing release airship-ucp-postgresql in namespace ucp, wait=True, timeout=1800s[00m
+2019-08-23 22:38:33.961 9 INFO armada.handlers.tiller [-] [chart=ucp-postgresql]: Helm install release: wait=True, timeout=1800[00m
+2019-08-23 22:38:33.962 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-rabbitmq]: Installing release airship-ucp-rabbitmq in namespace ucp, wait=True, timeout=300s[00m
+2019-08-23 22:38:33.965 9 INFO armada.handlers.tiller [-] [chart=ucp-rabbitmq]: Helm install release: wait=True, timeout=300[00m
+2019-08-23 22:38:33.967 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-mariadb]: Installing release airship-ucp-mariadb in namespace ucp, wait=True, timeout=300s[00m
+2019-08-23 22:38:33.970 9 INFO armada.handlers.tiller [-] [chart=ucp-mariadb]: Helm install release: wait=True, timeout=300[00m
+2019-08-23 22:38:52.756 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-ingress]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-ingress', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:38:52.756 9 INFO armada.handlers.wait [-] [chart=ucp-ingress]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-ingress required=False for 281s[00m
+2019-08-23 22:38:52.759 9 INFO armada.handlers.wait [-] [chart=ucp-ingress]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-ingress required=True for 281s[00m
+2019-08-23 22:38:55.362 9 INFO armada.handlers.test [-] [chart=ucp-ingress]: RUNNING: airship-ingress tests with timeout=300s[00m
+2019-08-23 22:38:55.375 9 INFO armada.handlers.tiller [-] [chart=ucp-ingress]: Running Helm test: release=airship-ingress, timeout=300[00m
+2019-08-23 22:38:55.393 9 INFO armada.handlers.tiller [-] [chart=ucp-ingress]: No Tests Found[00m
+2019-08-23 22:38:55.479 9 INFO armada.handlers.test [-] [chart=ucp-ingress]: PASSED: airship-ingress[00m
+2019-08-23 22:39:49.130 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-postgresql]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-ucp-postgresql', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:39:49.131 9 INFO armada.handlers.wait [-] [chart=ucp-postgresql]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-ucp-postgresql required=False for 1725s[00m
+2019-08-23 22:39:49.133 9 INFO armada.handlers.wait [-] [chart=ucp-postgresql]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-ucp-postgresql required=True for 1725s[00m
+2019-08-23 22:39:49.146 9 INFO armada.handlers.test [-] [chart=ucp-postgresql]: RUNNING: airship-ucp-postgresql tests with timeout=300s[00m
+2019-08-23 22:39:49.158 9 INFO armada.handlers.tiller [-] [chart=ucp-postgresql]: Running Helm test: release=airship-ucp-postgresql, timeout=300[00m
+2019-08-23 22:39:49.168 9 INFO armada.handlers.tiller [-] [chart=ucp-postgresql]: No Tests Found[00m
+2019-08-23 22:39:49.251 9 INFO armada.handlers.test [-] [chart=ucp-postgresql]: PASSED: airship-ucp-postgresql[00m
+2019-08-23 22:40:35.134 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-rabbitmq]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-ucp-rabbitmq', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:40:35.134 9 INFO armada.handlers.wait [-] [chart=ucp-rabbitmq]: Waiting for resource type=statefulset, namespace=ucp labels=release_group=airship-ucp-rabbitmq required=True, min_ready=100% for 179s[00m
+2019-08-23 22:40:35.147 9 INFO armada.handlers.test [-] [chart=ucp-rabbitmq]: RUNNING: airship-ucp-rabbitmq tests with timeout=300s[00m
+2019-08-23 22:40:35.160 9 INFO armada.handlers.tiller [-] [chart=ucp-rabbitmq]: Running Helm test: release=airship-ucp-rabbitmq, timeout=300[00m
+2019-08-23 22:40:35.172 9 INFO armada.handlers.tiller [-] [chart=ucp-rabbitmq]: RUNNING: airship-ucp-rabbitmq-test[00m
+2019-08-23 22:40:40.592 9 INFO armada.handlers.tiller [-] [chart=ucp-rabbitmq]: PASSED: airship-ucp-rabbitmq-test[00m
+2019-08-23 22:40:40.689 9 INFO armada.handlers.test [-] [chart=ucp-rabbitmq]: PASSED: airship-ucp-rabbitmq[00m
+2019-08-23 22:40:57.985 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-mariadb]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-ucp-mariadb', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:40:57.986 9 INFO armada.handlers.wait [-] [chart=ucp-mariadb]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-ucp-mariadb required=False for 156s[00m
+2019-08-23 22:40:57.998 9 INFO armada.handlers.wait [-] [chart=ucp-mariadb]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-ucp-mariadb required=True for 156s[00m
+2019-08-23 22:40:58.014 9 INFO armada.handlers.test [-] [chart=ucp-mariadb]: RUNNING: airship-ucp-mariadb tests with timeout=300s[00m
+2019-08-23 22:40:58.030 9 INFO armada.handlers.tiller [-] [chart=ucp-mariadb]: Running Helm test: release=airship-ucp-mariadb, timeout=300[00m
+2019-08-23 22:40:58.050 9 INFO armada.handlers.tiller [-] [chart=ucp-mariadb]: RUNNING: airship-ucp-mariadb-test[00m
+2019-08-23 22:41:18.318 9 INFO armada.handlers.tiller [-] [chart=ucp-mariadb]: PASSED: airship-ucp-mariadb-test[00m
+2019-08-23 22:41:18.465 9 INFO armada.handlers.test [-] [chart=ucp-mariadb]: PASSED: airship-ucp-mariadb[00m
+2019-08-23 22:41:18.465 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup ucp-core.[00m
+2019-08-23 22:41:18.466 9 INFO armada.handlers.armada [-] Processing ChartGroup: ucp-keystone (Airship Keystone components), sequenced=False[00m
+2019-08-23 22:41:18.466 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-keystone-memcached]: Processing Chart, release=airship-ucp-keystone-memcached[00m
+2019-08-23 22:41:18.467 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-keystone-memcached]: known: [], release_name: airship-ucp-keystone-memcached[00m
+2019-08-23 22:41:18.467 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-keystone]: Processing Chart, release=airship-ucp-keystone[00m
+2019-08-23 22:41:18.467 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-keystone-memcached]: Building dependency chart ucp-memcached-htk for release ucp-keystone-memcached.[00m
+2019-08-23 22:41:18.467 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-keystone]: known: [], release_name: airship-ucp-keystone[00m
+2019-08-23 22:41:18.471 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-keystone]: Building dependency chart ucp-keystone-htk for release ucp-keystone.[00m
+2019-08-23 22:41:18.497 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-keystone-memcached]: Installing release airship-ucp-keystone-memcached in namespace ucp, wait=True, timeout=600s[00m
+2019-08-23 22:41:18.498 9 INFO armada.handlers.tiller [-] [chart=ucp-keystone-memcached]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:41:18.501 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-keystone]: Installing release airship-ucp-keystone in namespace ucp, wait=True, timeout=600s[00m
+2019-08-23 22:41:18.511 9 INFO armada.handlers.tiller [-] [chart=ucp-keystone]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:41:20.764 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-keystone-memcached]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-ucp-keystone-memcached', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:41:20.764 9 INFO armada.handlers.wait [-] [chart=ucp-keystone-memcached]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-ucp-keystone-memcached required=False for 598s[00m
+2019-08-23 22:41:20.767 9 INFO armada.handlers.wait [-] [chart=ucp-keystone-memcached]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-ucp-keystone-memcached required=True for 598s[00m
+2019-08-23 22:41:37.601 9 INFO armada.handlers.test [-] [chart=ucp-keystone-memcached]: RUNNING: airship-ucp-keystone-memcached tests with timeout=300s[00m
+2019-08-23 22:41:37.607 9 INFO armada.handlers.tiller [-] [chart=ucp-keystone-memcached]: Running Helm test: release=airship-ucp-keystone-memcached, timeout=300[00m
+2019-08-23 22:41:37.619 9 INFO armada.handlers.tiller [-] [chart=ucp-keystone-memcached]: No Tests Found[00m
+2019-08-23 22:41:37.663 9 INFO armada.handlers.test [-] [chart=ucp-keystone-memcached]: PASSED: airship-ucp-keystone-memcached[00m
+2019-08-23 22:42:46.552 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-keystone]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-ucp-keystone', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:42:46.552 9 INFO armada.handlers.wait [-] [chart=ucp-keystone]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-ucp-keystone required=False for 512s[00m
+2019-08-23 22:43:00.038 9 INFO armada.handlers.wait [-] [chart=ucp-keystone]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-ucp-keystone required=True for 499s[00m
+2019-08-23 22:43:00.059 9 INFO armada.handlers.test [-] [chart=ucp-keystone]: RUNNING: airship-ucp-keystone tests with timeout=300s[00m
+2019-08-23 22:43:00.080 9 INFO armada.handlers.tiller [-] [chart=ucp-keystone]: Running Helm test: release=airship-ucp-keystone, timeout=300[00m
+2019-08-23 22:43:00.097 9 INFO armada.handlers.tiller [-] [chart=ucp-keystone]: RUNNING: airship-ucp-keystone-test[00m
+2019-08-23 22:44:35.398 9 INFO armada.handlers.tiller [-] [chart=ucp-keystone]: PASSED: airship-ucp-keystone-test[00m
+2019-08-23 22:44:35.613 9 INFO armada.handlers.test [-] [chart=ucp-keystone]: PASSED: airship-ucp-keystone[00m
+2019-08-23 22:44:35.613 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup ucp-keystone.[00m
+2019-08-23 22:44:35.614 9 INFO armada.handlers.armada [-] Processing ChartGroup: ucp-divingbell (Divingbell), sequenced=False[00m
+2019-08-23 22:44:35.614 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-divingbell]: Processing Chart, release=airship-ucp-divingbell[00m
+2019-08-23 22:44:35.615 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-divingbell]: known: [], release_name: airship-ucp-divingbell[00m
+2019-08-23 22:44:35.615 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-divingbell]: Building dependency chart ucp-divingbell-htk for release ucp-divingbell.[00m
+2019-08-23 22:44:35.628 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-divingbell]: Installing release airship-ucp-divingbell in namespace ucp, wait=True, timeout=300s[00m
+2019-08-23 22:44:35.635 9 INFO armada.handlers.tiller [-] [chart=ucp-divingbell]: Helm install release: wait=True, timeout=300[00m
+2019-08-23 22:44:46.218 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-divingbell]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-ucp-divingbell', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:44:46.218 9 INFO armada.handlers.wait [-] [chart=ucp-divingbell]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-ucp-divingbell required=False for 289s[00m
+2019-08-23 22:44:46.222 9 INFO armada.handlers.wait [-] [chart=ucp-divingbell]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-ucp-divingbell required=True for 289s[00m
+2019-08-23 22:44:46.237 9 INFO armada.handlers.test [-] [chart=ucp-divingbell]: RUNNING: airship-ucp-divingbell tests with timeout=300s[00m
+2019-08-23 22:44:46.253 9 INFO armada.handlers.tiller [-] [chart=ucp-divingbell]: Running Helm test: release=airship-ucp-divingbell, timeout=300[00m
+2019-08-23 22:44:46.268 9 INFO armada.handlers.tiller [-] [chart=ucp-divingbell]: No Tests Found[00m
+2019-08-23 22:44:46.390 9 INFO armada.handlers.test [-] [chart=ucp-divingbell]: PASSED: airship-ucp-divingbell[00m
+2019-08-23 22:44:46.391 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup ucp-divingbell.[00m
+2019-08-23 22:44:46.391 9 INFO armada.handlers.armada [-] Processing ChartGroup: ucp-armada (Armada), sequenced=True[00m
+2019-08-23 22:44:46.392 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-tiller]: Processing Chart, release=airship-ucp-tiller[00m
+2019-08-23 22:44:46.392 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-tiller]: known: [], release_name: airship-ucp-tiller[00m
+2019-08-23 22:44:46.392 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-tiller]: Building dependency chart tiller-htk for release ucp-tiller.[00m
+2019-08-23 22:44:46.402 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-tiller]: Installing release airship-ucp-tiller in namespace kube-system, wait=False, timeout=100s[00m
+2019-08-23 22:44:46.403 9 INFO armada.handlers.tiller [-] [chart=ucp-tiller]: Helm install release: wait=False, timeout=100[00m
+2019-08-23 22:44:46.540 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-tiller]: Install completed with results from Tiller: {'namespace': 'kube-system', 'release': 'airship-ucp-tiller', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:44:46.540 9 INFO armada.handlers.wait [-] [chart=ucp-tiller]: Waiting for resource type=job, namespace=kube-system labels=release_group=airship-ucp-tiller required=False for 100s[00m
+2019-08-23 22:44:46.546 9 INFO armada.handlers.wait [-] [chart=ucp-tiller]: Waiting for resource type=pod, namespace=kube-system labels=release_group=airship-ucp-tiller required=True for 100s[00m
+2019-08-23 22:44:51.084 9 INFO armada.handlers.test [-] [chart=ucp-tiller]: RUNNING: airship-ucp-tiller tests with timeout=300s[00m
+2019-08-23 22:44:51.089 9 INFO armada.handlers.tiller [-] [chart=ucp-tiller]: Running Helm test: release=airship-ucp-tiller, timeout=300[00m
+2019-08-23 22:44:51.102 9 INFO armada.handlers.tiller [-] [chart=ucp-tiller]: No Tests Found[00m
+2019-08-23 22:44:51.152 9 INFO armada.handlers.test [-] [chart=ucp-tiller]: PASSED: airship-ucp-tiller[00m
+2019-08-23 22:44:51.153 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-armada]: Processing Chart, release=airship-ucp-armada[00m
+2019-08-23 22:44:51.153 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-armada]: known: [], release_name: airship-ucp-armada[00m
+2019-08-23 22:44:51.153 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-armada]: Building dependency chart armada-htk for release ucp-armada.[00m
+2019-08-23 22:44:51.163 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-armada]: Installing release airship-ucp-armada in namespace ucp, wait=True, timeout=100s[00m
+2019-08-23 22:44:51.168 9 INFO armada.handlers.tiller [-] [chart=ucp-armada]: Helm install release: wait=True, timeout=100[00m
+2019-08-23 22:45:37.889 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-armada]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-ucp-armada', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:45:37.889 9 INFO armada.handlers.wait [-] [chart=ucp-armada]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-ucp-armada required=False for 53s[00m
+2019-08-23 22:45:37.899 9 INFO armada.handlers.wait [-] [chart=ucp-armada]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-ucp-armada required=True for 53s[00m
+2019-08-23 22:45:43.357 9 INFO armada.handlers.test [-] [chart=ucp-armada]: RUNNING: airship-ucp-armada tests with timeout=300s[00m
+2019-08-23 22:45:43.371 9 INFO armada.handlers.tiller [-] [chart=ucp-armada]: Running Helm test: release=airship-ucp-armada, timeout=300[00m
+2019-08-23 22:45:43.383 9 INFO armada.handlers.tiller [-] [chart=ucp-armada]: RUNNING: airship-ucp-armada-armada-api-test[00m
+2019-08-23 22:45:45.996 9 INFO armada.handlers.tiller [-] [chart=ucp-armada]: PASSED: airship-ucp-armada-armada-api-test[00m
+2019-08-23 22:45:46.104 9 INFO armada.handlers.test [-] [chart=ucp-armada]: PASSED: airship-ucp-armada[00m
+2019-08-23 22:45:46.104 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup ucp-armada.[00m
+2019-08-23 22:45:46.104 9 INFO armada.handlers.armada [-] Processing ChartGroup: ucp-deckhand (Deckhand), sequenced=False[00m
+2019-08-23 22:45:46.104 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-barbican]: Processing Chart, release=airship-ucp-barbican[00m
+2019-08-23 22:45:46.105 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-barbican]: known: [], release_name: airship-ucp-barbican[00m
+2019-08-23 22:45:46.105 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-deckhand]: Processing Chart, release=airship-ucp-deckhand[00m
+2019-08-23 22:45:46.106 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-deckhand]: known: [], release_name: airship-ucp-deckhand[00m
+2019-08-23 22:45:46.106 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-barbican]: Building dependency chart ucp-barbican-htk for release ucp-barbican.[00m
+2019-08-23 22:45:46.106 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-deckhand]: Building dependency chart deckhand-htk for release ucp-deckhand.[00m
+2019-08-23 22:45:46.135 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-deckhand]: Installing release airship-ucp-deckhand in namespace ucp, wait=True, timeout=600s[00m
+2019-08-23 22:45:46.142 9 INFO armada.handlers.tiller [-] [chart=ucp-deckhand]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:45:46.143 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-barbican]: Installing release airship-ucp-barbican in namespace ucp, wait=True, timeout=300s[00m
+2019-08-23 22:45:46.154 9 INFO armada.handlers.tiller [-] [chart=ucp-barbican]: Helm install release: wait=True, timeout=300[00m
+2019-08-23 22:46:44.002 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-barbican]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-ucp-barbican', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:46:44.002 9 INFO armada.handlers.wait [-] [chart=ucp-barbican]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-ucp-barbican required=False for 242s[00m
+2019-08-23 22:46:44.014 9 INFO armada.handlers.wait [-] [chart=ucp-barbican]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-ucp-barbican required=True for 242s[00m
+2019-08-23 22:46:47.756 9 INFO armada.handlers.test [-] [chart=ucp-barbican]: RUNNING: airship-ucp-barbican tests with timeout=300s[00m
+2019-08-23 22:46:47.784 9 INFO armada.handlers.tiller [-] [chart=ucp-barbican]: Running Helm test: release=airship-ucp-barbican, timeout=300[00m
+2019-08-23 22:46:47.801 9 INFO armada.handlers.tiller [-] [chart=ucp-barbican]: RUNNING: airship-ucp-barbican-test[00m
+2019-08-23 22:46:57.155 9 INFO armada.handlers.tiller [-] [chart=ucp-barbican]: PASSED: airship-ucp-barbican-test[00m
+2019-08-23 22:46:57.311 9 INFO armada.handlers.test [-] [chart=ucp-barbican]: PASSED: airship-ucp-barbican[00m
+2019-08-23 22:47:05.638 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-deckhand]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-ucp-deckhand', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:47:05.638 9 INFO armada.handlers.wait [-] [chart=ucp-deckhand]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-ucp-deckhand required=False for 520s[00m
+2019-08-23 22:47:05.649 9 INFO armada.handlers.wait [-] [chart=ucp-deckhand]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-ucp-deckhand required=True for 520s[00m
+2019-08-23 22:47:18.846 9 INFO armada.handlers.test [-] [chart=ucp-deckhand]: RUNNING: airship-ucp-deckhand tests with timeout=300s[00m
+2019-08-23 22:47:18.866 9 INFO armada.handlers.tiller [-] [chart=ucp-deckhand]: Running Helm test: release=airship-ucp-deckhand, timeout=300[00m
+2019-08-23 22:47:18.882 9 INFO armada.handlers.tiller [-] [chart=ucp-deckhand]: RUNNING: airship-ucp-deckhand-deckhand-api-test[00m
+2019-08-23 22:47:21.143 9 INFO armada.handlers.tiller [-] [chart=ucp-deckhand]: PASSED: airship-ucp-deckhand-deckhand-api-test[00m
+2019-08-23 22:47:21.286 9 INFO armada.handlers.test [-] [chart=ucp-deckhand]: PASSED: airship-ucp-deckhand[00m
+2019-08-23 22:47:21.286 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup ucp-deckhand.[00m
+2019-08-23 22:47:21.287 9 INFO armada.handlers.armada [-] Processing ChartGroup: ucp-drydock (Drydock), sequenced=False[00m
+2019-08-23 22:47:21.287 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-maas]: Processing Chart, release=airship-maas[00m
+2019-08-23 22:47:21.288 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-maas]: known: [], release_name: airship-maas[00m
+2019-08-23 22:47:21.288 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-drydock]: Processing Chart, release=airship-drydock[00m
+2019-08-23 22:47:21.288 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-maas]: Building dependency chart maas-htk for release maas.[00m
+2019-08-23 22:47:21.288 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-drydock]: known: [], release_name: airship-drydock[00m
+2019-08-23 22:47:21.289 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-drydock]: Building dependency chart drydock-htk for release drydock.[00m
+2019-08-23 22:47:21.316 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-drydock]: Installing release airship-drydock in namespace ucp, wait=True, timeout=600s[00m
+2019-08-23 22:47:21.323 9 INFO armada.handlers.tiller [-] [chart=ucp-drydock]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:47:21.325 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-maas]: Installing release airship-maas in namespace ucp, wait=True, timeout=1800s[00m
+2019-08-23 22:47:21.333 9 INFO armada.handlers.tiller [-] [chart=ucp-maas]: Helm install release: wait=True, timeout=1800[00m
+2019-08-23 22:50:16.720 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-drydock]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-drydock', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:50:16.720 9 INFO armada.handlers.wait [-] [chart=ucp-drydock]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-drydock required=False for 425s[00m
+2019-08-23 22:50:16.734 9 INFO armada.handlers.wait [-] [chart=ucp-drydock]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-drydock required=True for 425s[00m
+2019-08-23 22:50:21.959 9 INFO armada.handlers.test [-] [chart=ucp-drydock]: RUNNING: airship-drydock tests with timeout=300s[00m
+2019-08-23 22:50:21.979 9 INFO armada.handlers.tiller [-] [chart=ucp-drydock]: Running Helm test: release=airship-drydock, timeout=300[00m
+2019-08-23 22:50:21.994 9 INFO armada.handlers.tiller [-] [chart=ucp-drydock]: RUNNING: airship-drydock-auth-test[00m
+2019-08-23 22:50:24.411 9 INFO armada.handlers.tiller [-] [chart=ucp-drydock]: PASSED: airship-drydock-auth-test[00m
+2019-08-23 22:50:24.411 9 INFO armada.handlers.tiller [-] [chart=ucp-drydock]: RUNNING: airship-drydock-api-test[00m
+2019-08-23 22:50:27.012 9 INFO armada.handlers.tiller [-] [chart=ucp-drydock]: PASSED: airship-drydock-api-test[00m
+2019-08-23 22:50:27.187 9 INFO armada.handlers.test [-] [chart=ucp-drydock]: PASSED: airship-drydock[00m
+2019-08-23 22:56:11.628 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-maas]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-maas', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:56:11.628 9 INFO armada.handlers.wait [-] [chart=ucp-maas]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-maas required=False for 1270s[00m
+2019-08-23 22:56:11.639 9 INFO armada.handlers.wait [-] [chart=ucp-maas]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-maas required=True for 1270s[00m
+2019-08-23 22:56:11.661 9 INFO armada.handlers.test [-] [chart=ucp-maas]: RUNNING: airship-maas tests with timeout=300s[00m
+2019-08-23 22:56:11.685 9 INFO armada.handlers.tiller [-] [chart=ucp-maas]: Running Helm test: release=airship-maas, timeout=300[00m
+2019-08-23 22:56:11.699 9 INFO armada.handlers.tiller [-] [chart=ucp-maas]: RUNNING: airship-maas-api-test[00m
+2019-08-23 22:56:20.044 9 INFO armada.handlers.tiller [-] [chart=ucp-maas]: PASSED: airship-maas-api-test[00m
+2019-08-23 22:56:20.236 9 INFO armada.handlers.test [-] [chart=ucp-maas]: PASSED: airship-maas[00m
+2019-08-23 22:56:20.237 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup ucp-drydock.[00m
+2019-08-23 22:56:20.237 9 INFO armada.handlers.armada [-] Processing ChartGroup: ucp-promenade (Promenade), sequenced=False[00m
+2019-08-23 22:56:20.237 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-promenade]: Processing Chart, release=airship-ucp-promenade[00m
+2019-08-23 22:56:20.238 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-promenade]: known: [], release_name: airship-ucp-promenade[00m
+2019-08-23 22:56:20.238 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-promenade]: Building dependency chart promenade-htk for release ucp-promenade.[00m
+2019-08-23 22:56:20.246 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-promenade]: Installing release airship-ucp-promenade in namespace ucp, wait=True, timeout=600s[00m
+2019-08-23 22:56:20.251 9 INFO armada.handlers.tiller [-] [chart=ucp-promenade]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:56:52.894 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-promenade]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-ucp-promenade', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:56:52.894 9 INFO armada.handlers.wait [-] [chart=ucp-promenade]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-ucp-promenade required=False for 567s[00m
+2019-08-23 22:56:52.903 9 INFO armada.handlers.wait [-] [chart=ucp-promenade]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-ucp-promenade required=True for 567s[00m
+2019-08-23 22:56:54.296 9 INFO armada.handlers.test [-] [chart=ucp-promenade]: RUNNING: airship-ucp-promenade tests with timeout=300s[00m
+2019-08-23 22:56:54.312 9 INFO armada.handlers.tiller [-] [chart=ucp-promenade]: Running Helm test: release=airship-ucp-promenade, timeout=300[00m
+2019-08-23 22:56:54.325 9 INFO armada.handlers.tiller [-] [chart=ucp-promenade]: RUNNING: airship-ucp-promenade-api-test[00m
+2019-08-23 22:56:57.760 9 INFO armada.handlers.tiller [-] [chart=ucp-promenade]: PASSED: airship-ucp-promenade-api-test[00m
+2019-08-23 22:56:57.871 9 INFO armada.handlers.test [-] [chart=ucp-promenade]: PASSED: airship-ucp-promenade[00m
+2019-08-23 22:56:57.871 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup ucp-promenade.[00m
+2019-08-23 22:56:57.872 9 INFO armada.handlers.armada [-] Processing ChartGroup: ucp-shipyard (Shipyard), sequenced=False[00m
+2019-08-23 22:56:57.872 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-shipyard]: Processing Chart, release=airship-ucp-shipyard[00m
+2019-08-23 22:56:57.872 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-shipyard]: known: [], release_name: airship-ucp-shipyard[00m
+2019-08-23 22:56:57.873 9 INFO armada.handlers.chartbuilder [-] [chart=ucp-shipyard]: Building dependency chart shipyard-htk for release ucp-shipyard.[00m
+2019-08-23 22:56:57.884 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-shipyard]: Installing release airship-ucp-shipyard in namespace ucp, wait=True, timeout=600s[00m
+2019-08-23 22:56:57.893 9 INFO armada.handlers.tiller [-] [chart=ucp-shipyard]: Helm install release: wait=True, timeout=600[00m
+2019-08-23 22:58:37.841 9 INFO armada.handlers.chart_deploy [-] [chart=ucp-shipyard]: Install completed with results from Tiller: {'namespace': 'ucp', 'release': 'airship-ucp-shipyard', 'description': 'Install complete', 'version': 1, 'status': 'DEPLOYED'}[00m
+2019-08-23 22:58:37.841 9 INFO armada.handlers.wait [-] [chart=ucp-shipyard]: Waiting for resource type=job, namespace=ucp labels=release_group=airship-ucp-shipyard required=False for 500s[00m
+2019-08-23 22:58:37.857 9 INFO armada.handlers.wait [-] [chart=ucp-shipyard]: Waiting for resource type=pod, namespace=ucp labels=release_group=airship-ucp-shipyard required=True for 500s[00m
+2019-08-23 22:58:37.889 9 INFO armada.handlers.test [-] [chart=ucp-shipyard]: RUNNING: airship-ucp-shipyard tests with timeout=300s[00m
+2019-08-23 22:58:37.921 9 INFO armada.handlers.tiller [-] [chart=ucp-shipyard]: Running Helm test: release=airship-ucp-shipyard, timeout=300[00m
+2019-08-23 22:58:37.942 9 INFO armada.handlers.tiller [-] [chart=ucp-shipyard]: RUNNING: airship-ucp-shipyard-shipyard-api-test[00m
+2019-08-23 22:58:40.809 9 INFO armada.handlers.tiller [-] [chart=ucp-shipyard]: PASSED: airship-ucp-shipyard-shipyard-api-test[00m
+2019-08-23 22:58:41.053 9 INFO armada.handlers.test [-] [chart=ucp-shipyard]: PASSED: airship-ucp-shipyard[00m
+2019-08-23 22:58:41.054 9 INFO armada.handlers.armada [-] All Charts applied in ChartGroup ucp-shipyard.[00m
+2019-08-23 22:58:41.054 9 INFO armada.handlers.armada [-] Performing post-flight operations.[00m
+2019-08-23 22:58:41.176 9 INFO armada.handlers.armada [-] Done applying manifest.[00m
+2019-08-23 22:58:42.062 9 INFO armada.handlers.lock [-] Releasing lock[00m
+2019-08-23 22:58:42.068 9 INFO armada.cli [-] Did not perform chart upgrade(s)[00m
+2019-08-23 22:58:42.069 9 INFO armada.cli [-] No release changes detected[00m
+2019-08-23 22:58:42.069 9 INFO armada.cli [-] Chart airship-podsecuritypolicy took action: install[00m
+2019-08-23 22:58:42.069 9 INFO armada.cli [-] Chart airship-kubernetes-proxy took action: install[00m
+2019-08-23 22:58:42.069 9 INFO armada.cli [-] Chart airship-kubernetes-calico-etcd took action: install[00m
+2019-08-23 22:58:42.069 9 INFO armada.cli [-] Chart airship-kubernetes-calico took action: install[00m
+2019-08-23 22:58:42.069 9 INFO armada.cli [-] Chart airship-coredns took action: install[00m
+2019-08-23 22:58:42.069 9 INFO armada.cli [-] Chart airship-kubernetes-etcd took action: install[00m
+2019-08-23 22:58:42.069 9 INFO armada.cli [-] Chart airship-haproxy took action: install[00m
+2019-08-23 22:58:42.069 9 INFO armada.cli [-] Chart airship-kubernetes-scheduler took action: install[00m
+2019-08-23 22:58:42.069 9 INFO armada.cli [-] Chart airship-kubernetes-controller-manager took action: install[00m
+2019-08-23 22:58:42.069 9 INFO armada.cli [-] Chart airship-kubernetes-apiserver took action: install[00m
+2019-08-23 22:58:42.069 9 INFO armada.cli [-] Chart airship-ingress-kube-system took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-ceph-ingress took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-ceph-mon took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-ceph-osd took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-ceph-client took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-ceph-provisioners took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-ceph-config took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ingress took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-postgresql took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-rabbitmq took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-mariadb took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-keystone-memcached took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-keystone took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-divingbell took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-tiller took action: install[00m
+2019-08-23 22:58:42.070 9 INFO armada.cli [-] Chart airship-ucp-armada took action: install[00m
+2019-08-23 22:58:42.071 9 INFO armada.cli [-] Chart airship-ucp-barbican took action: install[00m
+2019-08-23 22:58:42.071 9 INFO armada.cli [-] Chart airship-ucp-deckhand took action: install[00m
+2019-08-23 22:58:42.071 9 INFO armada.cli [-] Chart airship-drydock took action: install[00m
+2019-08-23 22:58:42.071 9 INFO armada.cli [-] Chart airship-maas took action: install[00m
+2019-08-23 22:58:42.071 9 INFO armada.cli [-] Chart airship-ucp-promenade took action: install[00m
+2019-08-23 22:58:42.071 9 INFO armada.cli [-] Chart airship-ucp-shipyard took action: install[00m
+2019-08-23 22:58:42.071 9 INFO armada.cli [-] Did not perform chart protected(s)[00m
+2019-08-23 22:58:42.071 9 INFO armada.cli [-] Did not perform chart purge(s)[00m
